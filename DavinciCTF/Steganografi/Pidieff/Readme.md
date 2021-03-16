@@ -8,7 +8,7 @@
 | Steganografi | 100 |
 
 ### Deskripsi
-![image](images/1_soal.PNG)
+![image](Images/1_soal.PNG)
 > <a href="super_secret.pdf"> <b>Source Soal</b></a> 
 ## Cara Penyelesaian
 Diberikan sebuah file pdf, setelah dibuka file pdf tersebut ternyata hanya terdapat tulisan:
@@ -29,7 +29,7 @@ Pada text tersebut tidak terdapat petunjuk apa-apa. Maka selanjutnya mencoba unt
 strings super_secret.pdf
 ```
 Maka didapatkan hasil sebagai berikut:
-![image](images/2_strings.PNG)
+![image](Images/2_strings.PNG)
 
 Setelah dibaca-baca pada strings tersebut, ternyata terdapat file tersembunyi bernama flag.txt. Selanjutnya digunakan tools online untuk melakukan ekstrak file pdf tersebut. Dan didapatkan file flag.txt, yang mana didalam file flag.txt tersebut terdapat flag dari soal.
 
